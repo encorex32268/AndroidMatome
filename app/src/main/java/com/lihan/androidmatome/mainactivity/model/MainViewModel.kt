@@ -16,14 +16,17 @@ class MainViewModel : ViewModel() {
     private val _mData = MutableStateFlow<UIStatus>(UIStatus.Empty)
     val mData  = _mData
 
+    init {
+        getData()
+    }
     fun getData() {
             val datas  = arrayListOf(
                 "Notification","Permission","NavigationComponent"
             )
-            _mData.value = UIStatus.HaveData(datas)
+        _mData.value = UIStatus.HaveData(datas)
     }
     fun searchData(string : String,titles : ArrayList<String>){
-        var newList = arrayListOf<String>()
+        val newList = arrayListOf<String>()
         titles.forEach {
             if (it.contains(string)){
                 newList.add(it)

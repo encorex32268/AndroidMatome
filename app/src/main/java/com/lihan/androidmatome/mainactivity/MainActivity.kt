@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         mAdapter = MainAdapter(arrayListOf())
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        viewModel.getData()
         lifecycleScope.launchWhenStarted {
             viewModel.mData.collect {
                 when(it){
