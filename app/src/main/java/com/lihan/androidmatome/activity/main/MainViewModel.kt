@@ -2,6 +2,7 @@ package com.lihan.androidmatome.activity.main
 
 import androidx.lifecycle.ViewModel
 import com.lihan.androidmatome.activity.notification.NotificationActivity
+import com.lihan.androidmatome.activity.sharedpreferences.SharedPreferencesActivity
 import com.lihan.androidmatome.model.Function
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -19,7 +20,8 @@ class MainViewModel : ViewModel() {
     }
     fun getData() {
             val datas  = arrayListOf(
-                Function(NotificationActivity::class.java)
+                Function(NotificationActivity::class.java),
+                Function(SharedPreferencesActivity::class.java)
             )
         _mData.value = UIStatus.HaveData(datas)
     }
