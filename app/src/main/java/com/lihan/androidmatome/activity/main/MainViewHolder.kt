@@ -1,4 +1,4 @@
-package com.lihan.androidmatome.mainactivity
+package com.lihan.androidmatome.activity.main
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

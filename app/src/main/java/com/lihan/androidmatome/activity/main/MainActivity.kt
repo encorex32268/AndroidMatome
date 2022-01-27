@@ -1,29 +1,29 @@
-package com.lihan.androidmatome.mainactivity
+package com.lihan.androidmatome.activity.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.lihan.androidmatome.databinding.ActivityMainBinding
-import com.lihan.androidmatome.mainactivity.model.MainViewModel
+import com.lihan.androidmatome.model.Function
 import kotlinx.coroutines.flow.collect
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainAdapter.MainItemClickListener {
     private lateinit var binding : ActivityMainBinding
     private lateinit var viewModel : MainViewModel
-    private lateinit var mAdapter :MainAdapter
+    private lateinit var mAdapter : MainAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        mAdapter = MainAdapter(arrayListOf())
+        mAdapter = MainAdapter(arrayListOf()).also {
+            it.mainItemClickListener = this
+        }
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         lifecycleScope.launchWhenStarted {
             viewModel.mData.collect {
@@ -65,4 +65,11 @@ class MainActivity : AppCompatActivity() {
             })
         }
     }
+
+    override fun itemClick(function: Function)=
+        startActivity(
+            Intent(this@MainActivity,function.toFunctionClass)
+        )
+
+
 }
