@@ -2,6 +2,7 @@ package com.lihan.androidmatome.activity.main
 
 import androidx.lifecycle.ViewModel
 import com.lihan.androidmatome.activity.notification.NotificationActivity
+import com.lihan.androidmatome.activity.permissions.PermissionsActivity
 import com.lihan.androidmatome.activity.retrofitapi.RetroFitApiActivity
 import com.lihan.androidmatome.activity.sharedpreferences.SharedPreferencesActivity
 import com.lihan.androidmatome.model.Function
@@ -23,7 +24,8 @@ class MainViewModel : ViewModel() {
             val datas  = arrayListOf(
                 Function(NotificationActivity::class.java),
                 Function(SharedPreferencesActivity::class.java),
-                Function(RetroFitApiActivity::class.java)
+                Function(RetroFitApiActivity::class.java),
+                Function(PermissionsActivity::class.java)
             )
         _mData.value = UIStatus.HaveData(datas)
     }

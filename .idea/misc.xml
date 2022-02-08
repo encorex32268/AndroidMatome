@@ -5,10 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/activity_notification.xml" value="0.20520833333333333" />
+        <entry key="app/src/main/res/layout/activity_permissions.xml" value="0.2028985507246377" />
         <entry key="app/src/main/res/layout/activity_retro_fit_api.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_shared_preferences.xml" value="0.18697916666666667" />
         <entry key="app/src/main/res/layout/main_item.xml" value="0.21331521739130435" />
-        <entry key="app/src/main/res/layout/retrofit_item.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/retrofit_item.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher2.xml" value="0.203125" />
       </map>
     </option>
