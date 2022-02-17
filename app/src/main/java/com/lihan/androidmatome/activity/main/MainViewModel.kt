@@ -1,6 +1,7 @@
 package com.lihan.androidmatome.activity.main
 
 import androidx.lifecycle.ViewModel
+import com.lihan.androidmatome.activity.compose.ComposeActivity
 import com.lihan.androidmatome.activity.customview.CustomViewActivity
 import com.lihan.androidmatome.activity.notification.NotificationActivity
 import com.lihan.androidmatome.activity.permissions.PermissionsActivity
@@ -27,7 +28,8 @@ class MainViewModel : ViewModel() {
                 Function(SharedPreferencesActivity::class.java),
                 Function(RetroFitApiActivity::class.java),
                 Function(PermissionsActivity::class.java),
-                Function(CustomViewActivity::class.java)
+                Function(CustomViewActivity::class.java),
+                Function(ComposeActivity::class.java),
             )
         _mData.value = UIStatus.HaveData(datas)
     }

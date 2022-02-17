@@ -13,13 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidMatome">
         <activity
-            android:name=".activity.customview.CustomViewActivity"
-            android:exported="true" >
+            android:name=".activity.compose.ComposeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_compose"
+            android:theme="@style/Theme.AndroidMatome" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
+        </activity>
+        <activity
+            android:name=".activity.customview.CustomViewActivity"
+            android:exported="true">
 
         </activity>
         <activity
@@ -39,9 +48,6 @@
             android:exported="true">
 
         </activity>
-
-
-
     </application>
 
 </manifest>
