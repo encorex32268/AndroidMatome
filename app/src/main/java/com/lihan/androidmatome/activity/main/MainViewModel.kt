@@ -6,6 +6,7 @@ import com.lihan.androidmatome.activity.customview.CustomViewActivity
 import com.lihan.androidmatome.activity.notification.NotificationActivity
 import com.lihan.androidmatome.activity.permissions.PermissionsActivity
 import com.lihan.androidmatome.activity.retrofitapi.RetroFitApiActivity
+import com.lihan.androidmatome.activity.settings.SettingsActivity
 import com.lihan.androidmatome.activity.sharedpreferences.SharedPreferencesActivity
 import com.lihan.androidmatome.model.Function
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -30,6 +31,7 @@ class MainViewModel : ViewModel() {
                 Function(PermissionsActivity::class.java),
                 Function(CustomViewActivity::class.java),
                 Function(ComposeActivity::class.java),
+                Function(SettingsActivity::class.java)
             )
         _mData.value = UIStatus.HaveData(datas)
     }
